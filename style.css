@@ -1,4 +1,3 @@
-table {
-    border: 1px;
-    border-color: aqua;
+table td tr {
+    background-color: brown;
 }
