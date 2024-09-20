@@ -1,10 +1,30 @@
-table {
-    border-collapse: collapse;  /* Collapse borders between cells */
-    width: 100%;  /* Set table width to 100% of container */
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    color: rgb(63, 62, 60);
+  }
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   
-  th, td {
-    padding: 8px;  /* Add padding to cells */
-    text-align: left;  /* Align text to the left */
-    border-bottom: 1px solid #ddd;  /* Add bottom border to cells */
+  tr:nth-child(even) {
+    background-color: #272430;
   }
+  tr:nth-child(odd) {
+    background-color: #1c1c1d;
+  }
+  
+  tr:hover td {
+    background-color: #696262;
+  }
+  
+ 
+tr:first-child td {
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+  }
+
