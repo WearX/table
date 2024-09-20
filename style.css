@@ -1,3 +1,10 @@
-table td tr {
-    background-color: brown;
-}
+table {
+    border-collapse: collapse;  /* Collapse borders between cells */
+    width: 100%;  /* Set table width to 100% of container */
+  }
+  
+  th, td {
+    padding: 8px;  /* Add padding to cells */
+    text-align: left;  /* Align text to the left */
+    border-bottom: 1px solid #ddd;  /* Add bottom border to cells */
+  }
