@@ -88,13 +88,15 @@ form.addEventListener('submit', function(e){
         const marriedChecked = married.checked
         const petValue = pet.value
  
-        array.push({
-            lastname: lastnameValue,
-            firstname1: firstname1Value,
-            firstname2: firstname2Value,
-            married: marriedChecked,
-            pet: petValue,
-        })
+        if(ValidateFields(lastname, firstname1, pet)){
+            array.push({
+                lastname: lastnameValue,
+                firstname1: firstname1Value,
+                firstname2: firstname2Value,
+                married: marriedChecked,
+                pet: petValue,
+            })
+        }
         RenderTable();
         
         if(firstname2Value === ''){
@@ -171,6 +173,33 @@ function RenderTable(){
 
 }
 
+function ValidateFields(lastnamevalid, firstname1valid, petvalid){
+    let result = true
+    form.querySelectorAll('.error')
+
+
+    if(lastnamevalid.value === ''){
+
+        let error = lastnamevalid.parentElement.querySelector('.error')
+        error.innerHTML = "Vezetéknév kötelező!"
+        result = false
+    }
+    else if(firstname1valid.value === ''){
+        let error2 = firstname1valid.parentElement.querySelector('.error')
+        error2.innerHTML = "Keresztnév kötelező!"
+        result = false
+
+    }
+    else if(pet.value === ''){
+        let error3 = petvalid.parentElement.querySelector('.error')
+        error3.innerHTML = "Állat kötelező!"
+        result = false  
+
+    }
+
+    return result
+
+}
 
  
  
