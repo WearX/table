@@ -174,9 +174,15 @@ function RenderTable(){
 }
 
 function ValidateFields(lastnamevalid, firstname1valid, petvalid){
-    let result = true
-    form.querySelectorAll('.error')
+    
+    const errormessages = form.querySelectorAll('.error')
+    
+    for(const error of errormessages){
 
+        error.innerHTML = ''
+    }
+    
+    let result = true
 
     if(lastnamevalid.value === ''){
 
