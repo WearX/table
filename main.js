@@ -39,6 +39,9 @@ const tableHeaderRow = document.createElement("tr")
 const tableHeaderRowLastname = document.createElement("th")
 tableHeaderRowLastname.innerHTML = "Vezetéknév"
  
+
+createTableCell("td",'Vezetéknév', tableHeaderRow )
+
 const tableHeaderRowFirstname = document.createElement("th")
 tableHeaderRowFirstname.innerHTML = "Keresztnév"
  
@@ -51,7 +54,7 @@ tableHeaderRowAnimal.innerHTML = "Állat"
  
 tableHeaderRowFirstname.colSpan = 2
 const tableBody = document.createElement("tbody")
- 
+
  
 document.body.appendChild(table)
  
@@ -116,6 +119,7 @@ function RenderTable(){
     for(const person of array){
         person.lastname
         const tr = document.createElement("tr")
+        tableBody.appendChild(tr)
      
         tr.addEventListener('click', function(e){
             console.log('click')
@@ -128,7 +132,6 @@ function RenderTable(){
         })
      
         tr.innerHTML = person.lastname
-        tableBody.appendChild(tr)
      
         const td = document.createElement("td")
         td.innerHTML = person.firstname1
@@ -207,7 +210,18 @@ function ValidateFields(lastnamevalid, firstname1valid, petvalid){
 
 }
 
- 
+/**
+ * 
+ * @param {'td' | 'th'} tagName 
+ * @param {string} innerHTML 
+ * @param {HTMLTableRowElement} parent 
+ * @returns {HTMLTableCellElement}
+ */
+function createTableCell(tagName, innerHTML, parent){
+    const cell = document.createElement(tagName);
+    cell.innerHTML = innerHTML;
+    parent.appendChild(cell)
+}
  
  
 /*
