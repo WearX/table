@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
     <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <form id="form" action="/">
@@ -10,9 +11,8 @@
         <div class="field">
  
             <label for="lastname">Vezetéknév</label>
- 
-            <input name="lastname" id="lastname">
- 
+
+            <input type="text" id="lastname">
             <div class="error"></div>
  
         </div>
@@ -21,32 +21,31 @@
  
             <label for="firstname1">Keresztnév1</label>
  
-            <input name="firstname1" id="firstname1">
+            <input type="text" id="firstname1">
  
             <div class="error"></div>
  
         </div>
- 
         <div class="field">
  
             <label for="firstname2">Keresztnév2</label>
  
-            <input name="firstname2" id="firstname2">
+            <input type="text" id="firstname2">
  
             <div class="error"></div>
  
         </div>
- 
+        
         <div class="field">
  
             <label for="married">Házas</label>
  
-            <input name="married" id="married" type="checkbox">
+            <input type="checkbox" id="married">
  
             <div class="error"></div>
  
         </div>
- 
+        
         <div class="field">
  
             <label for="pet">Állat</label>
@@ -67,10 +66,11 @@
  
         </div>
  
-        <button>Feltöltés</button>
+        <button type="submit">Feltöltés</button>
  
     </form>
-   
+    
+    <script src="functions.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
